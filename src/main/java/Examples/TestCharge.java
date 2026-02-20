@@ -25,17 +25,17 @@ public class TestCharge {
                 .setCountry_dial_code("41")
                 .setFirst_name("John")
                 .setLast_name("Doe")
-                .setMid("DC10967")
+                .setMid("BLOOM_TREE")
                 .setMiddle_name("Preach")
                 .setPhone_number("123456789")
                 .setPostal_code("1234")
                 .setNotify_url("https://notify.yourapi.com")
                 .setRedirect_url("https://charge.airopay.com")
                 .setReference("AIROPAY"+new Date().getTime())
-                .setCvv(EncryptionService.encrypt("123", encryptionKey, iv))
-                .setCard_number(EncryptionService.encrypt("4441111155171162", encryptionKey, iv))
-                .setExpiry_month(EncryptionService.encrypt("10", encryptionKey, iv))
-                .setExpiry_year(EncryptionService.encrypt("28", encryptionKey, iv));
+                .setCvv(EncryptionService.encrypt("991", encryptionKey, iv))
+                .setCard_number(EncryptionService.encrypt("099999900934", encryptionKey, iv))
+                .setExpiry_month(EncryptionService.encrypt("06", encryptionKey, iv))
+                .setExpiry_year(EncryptionService.encrypt("46", encryptionKey, iv));
 
        ChargeResponseDTO chargeResponseDTO = AiropayDirectCharge.charge(chargeRequestDTO);
         System.out.println(chargeResponseDTO.getStatus());
